@@ -12,7 +12,7 @@ var circle_visible=true;
 var circle_checkbox
 var speed
 var pointweight=4
-var n=10;
+var n=4;
 var rslider
 var out=false
 
@@ -28,8 +28,8 @@ circle_checkbox=createCheckbox("toggle circle")
 circle_checkbox.changed(bg)
 for(i=0;i<n;i++){
   
-  angle[i]=ang
-  ang=ang/random(10,20)
+  angle[i]=ang*3
+  ang=ang/10
 
   var circle_visible=true
 }
@@ -66,10 +66,10 @@ function draw() {
   frameRate(speed.value())
 
   if(circle_checkbox.checked())
-    circle_visible=false
+    circle_visible=true
 
   if(!circle_checkbox.checked())
-    circle_visible=true
+    circle_visible=false
   // if(circle_checkbox.changed())
     // background(51)
   if(circle_visible)
@@ -143,15 +143,3 @@ pop()
 
 
 }
-// function cir(ind){
-//
-//   translate(0,r[i]-r[i+1])
-//   ellipse(0,0,r[i]*2,r[i]*2)
-//   rotate(angle[i+1])
-
-// }
-// function mousePressed() {
-//   clear();
-//   noLoop()
-//   loop()
-// }
