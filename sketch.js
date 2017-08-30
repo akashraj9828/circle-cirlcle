@@ -15,6 +15,7 @@ var pointweight=4
 var n=4;
 var rslider
 var out=false
+var circle_visible=true
 
 
 function setup() {
@@ -31,7 +32,6 @@ for(i=0;i<n;i++){
   angle[i]=ang*3
   ang=ang/10
 
-  var circle_visible=true
 }
 
 // circle_checkbox.positon(700,700)
@@ -42,7 +42,7 @@ for(i=0;i<n;i++){
 
 // ang+=angSlider.value()
 // ang2+=ang2Slider.value()
-angleMode(RADIANS)
+angleMode(RADIANS) //set angle mode to radians default is degree
 // frameRate(1)
 
 // r=[200,10,50,25,12]
@@ -53,7 +53,7 @@ angleMode(RADIANS)
 function bg(){
   background(51)
 }
-function setradius(){
+function setradius(){  // function that set radius for all the circles excluding the main bigger circle
   for(i=0;i<n;i++){
     r[i]=r1
     r1=r1/2
@@ -63,7 +63,7 @@ function draw() {
   r1=rslider.value()
   setradius()
 
-  frameRate(speed.value())
+  frameRate(speed.value())    // changes framerate live using slider input
 
   if(circle_checkbox.checked())
     circle_visible=true
@@ -92,9 +92,9 @@ for (i=0;i<n;i++){
     rotate(angle[i])
     angle[i]+=(i+1)/100
     
-    if(out)
+    if(out)   //if circles rotates outside the main circle
     translate(0,r[i]*1.5)
-    if(!out)
+    if(!out)    //if circles rotates inside main circle 
       translate(0,r[i]*0.5)
     
 }
