@@ -34,19 +34,10 @@ for(i=0;i<n;i++){
 
 }
 
-// circle_checkbox.positon(700,700)
 
-// circle_checkbox = createCheckbox(" fill");
-//  circle_checkbox.changed(changeFill);
-// *   cnv = createCanvas(100, 100);
-
-// ang+=angSlider.value()
-// ang2+=ang2Slider.value()
 angleMode(RADIANS) //set angle mode to radians default is degree
-// frameRate(1)
 
-// r=[200,10,50,25,12]
-// angle=[0,0.001,0.002,0.003,0.004]
+
 
 }
 
@@ -70,13 +61,10 @@ function draw() {
 
   if(!circle_checkbox.checked())
     circle_visible=false
-  // if(circle_checkbox.changed())
-    // background(51)
+ 
   if(circle_visible)
   background(51)
- // ang+=angSlider.value();
- // ang2+=angSliderr.value();
-//  if(!circle_visible){
+ 
  push()
 noFill()
 stroke(255)
@@ -99,46 +87,7 @@ for (i=0;i<n;i++){
     
 }
 ellipse(0,0,5,5)
-// if(circle_visible)
-// ellipse(0,0,r1*2,r1*2)
-// rotate(ang1)
-// translate(0,r1-r2)
-// if(circle_visible)
-// ellipse(0,0,r2*2,r2*2)
-// rotate(ang2)
-// translate(0,r2-r3)
-// stroke(225)
-// strokeWeight(pointweight)
-// point(0,0)
-// if(circle_visible)
-// ellipse(0,0,r3*2,r3*2)
-// rotate(ang3)
-// translate(0,r3-r4)
-// stroke(225)
-// strokeWeight(pointweight)
-// point(0,0)
-// if(circle_visible)
-// ellipse(0,0,r4*2,r4*2)
-// rotate(ang4)
-// translate(0,r4-r5)
-// if(circle_visible)
-// ellipse(0,0,r5*2,r5*2)
-// for(i=0;i<5;i++)
-// cir(i+1)
-// push()
-// stroke(225)
-// strokeWeight(pointweight)
-// point(0,0)
-// pop()
-//  }
 
-
-// ang=ang+0.001
-// ang1+=0.1
-// ang2+=0.01
-// ang3+=0.13
-// ang4+=0.04
-// clear()
 pop()
 
 
